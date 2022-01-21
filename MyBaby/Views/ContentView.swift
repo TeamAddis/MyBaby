@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var tabSelection = 1
+    
     var body: some View {
-        DataEntryView()
+        TabView(selection: $tabSelection) {
+            DataEntryView()
+                .tabItem {
+                    Image(systemName: "plus.app")
+                }
+                .tag(1)
+        }
         // Force the Navigation View to use the stack navigation view style.
         // This is default on iPhone but not on iPad. This will create a uniform
         // Between the devices.
