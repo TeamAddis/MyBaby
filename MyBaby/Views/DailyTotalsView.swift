@@ -13,18 +13,61 @@ struct DailyTotalsView: View {
     var body: some View {
         HStack {
             Spacer()
-            DailyTotalPoopView()
+            HoursSinceLastFeedingView(records: records)
             Spacer()
-            DailyTotalPeeView()
+            DailyTotalPoopView(records: records)
+            Spacer()
+            DailyTotalPeeView(records: records)
             Spacer()
         }
     }
 }
 
-struct DailyTotalPoopView: View {
+struct HoursSinceLastFeedingView: View {
+    var records: [BabyRecord]
+    var hoursPast: Int = 24
+    
+    init(records: [BabyRecord]) {
+        self.records = records
+        
+        for record in self.records {
+            if record.formulaMilkVolume > 0 || record.breastMilkVolume > 0 {
+                let ti = Int(Date().timeIntervalSince(record.dateTime))
+                self.hoursPast = (ti / 3600)
+                break
+            }
+        }
+    }
+    
     var body: some View {
         VStack {
-            Text("Daily Total Poop:")
+            Text("Hours Since Last Feeding")
+            Text("\(hoursPast.description)")
+        }
+        .padding()
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.black)
+        )
+    }
+}
+
+struct DailyTotalPoopView: View {
+    var records: [BabyRecord]
+    var totalPoop: Int {
+        var count = 0
+        for record in records {
+            if record.poop {
+                count += 1
+            }
+        }
+        return count
+    }
+    
+    var body: some View {
+        VStack {
+            Text("Daily Total Poop")
+            Text("\(totalPoop.description)")
         }
         .padding()
         .overlay(
@@ -35,9 +78,21 @@ struct DailyTotalPoopView: View {
 }
 
 struct DailyTotalPeeView: View {
+    var records: [BabyRecord]
+    var totalPee: Int {
+        var count = 0
+        for record in records {
+            if record.pee {
+                count += 1
+            }
+        }
+        return count
+    }
+    
     var body: some View {
         VStack {
-            Text("Daily Total Pee:")
+            Text("Daily Total Pee")
+            Text("\(totalPee.description)")
         }
         .padding()
         .overlay(

@@ -17,6 +17,7 @@ struct DailySummaryView: View {
             Spacer()
             
             DailyTotalsView(records: records)
+                .padding()
             
             Spacer()
             

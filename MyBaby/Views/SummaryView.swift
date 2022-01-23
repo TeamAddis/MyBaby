@@ -8,12 +8,32 @@
 import SwiftUI
 
 struct SummaryView: View {
+    private enum SegmentedControlViews {
+        case dailySummary, weeklySummary
+    }
+    
+    @State private var selectedView = SegmentedControlViews.dailySummary
     
     var body: some View {
         NavigationView {
-            
-            DailySummaryView()
-                .navigationBarTitle(Text("Daily Summary"))
+            VStack {
+                Picker("", selection: self.$selectedView) {
+                    Text("Daily").tag(SegmentedControlViews.dailySummary)
+                    Text("Weekly").tag(SegmentedControlViews.weeklySummary)
+                }
+                .pickerStyle(.segmented)
+                .padding()
+                Spacer()
+                
+                switch selectedView {
+                case .dailySummary:
+                    DailySummaryView()
+                        .navigationBarTitle(Text("Daily Summary"))
+                case .weeklySummary:
+                    Text("TODO")
+                        .navigationBarTitle(Text("Weekly Summary"))
+                }
+            }
         }
         
     }

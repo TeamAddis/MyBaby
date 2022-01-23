@@ -51,7 +51,7 @@ struct TodaysBabyRecords: Queryable {
         let prevDate = Calendar.current.date(byAdding: .day, value: -1, to: today)!
         return ValueObservation
             .tracking(
-                BabyRecord.all().filter((prevDate...nextDate).contains(BabyRecord.Columns.dateTime)).fetchAll(_:)
+                BabyRecord.all().orderByDateDecending().filter((prevDate...nextDate).contains(BabyRecord.Columns.dateTime)).fetchAll(_:)
             )
             .publisher(
                 in: appDatabase.databaseReader,
