@@ -60,4 +60,10 @@ extension AppDatabase {
         let dbQueue = DatabaseQueue()
         return try! AppDatabase(dbQueue)
     }
+    
+    static func test() -> AppDatabase {
+        let appDatabase = empty()
+        try! appDatabase.createRecordsForUITest()
+        return appDatabase
+    }
 }

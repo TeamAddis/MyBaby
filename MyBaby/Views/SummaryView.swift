@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct SummaryView: View {
+    
     var body: some View {
-        DailySummaryView()
+        NavigationView {
+            
+            DailySummaryView()
+                .navigationBarTitle(Text("Daily Summary"))
+        }
+        
     }
 }
 

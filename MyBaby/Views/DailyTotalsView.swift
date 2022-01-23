@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DailyTotalsView: View {
+    var records: [BabyRecord]
+    
     var body: some View {
         HStack {
             Spacer()
@@ -47,6 +49,6 @@ struct DailyTotalPeeView: View {
 
 struct DailyTotalsView_Previews: PreviewProvider {
     static var previews: some View {
-        DailyTotalsView()
+        DailyTotalsView(records: [])
     }
 }

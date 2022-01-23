@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var tabSelection = 1
+    private enum ContentTabBarOptions {
+        case enterData, summary
+    }
+    @State private var tabSelection = ContentTabBarOptions.enterData
     
     var body: some View {
         TabView(selection: $tabSelection) {
@@ -16,12 +19,12 @@ struct ContentView: View {
                 .tabItem {
                     Image(systemName: "chart.bar.fill")
                 }
-                .tag(0)
+                .tag(ContentTabBarOptions.summary)
             DataEntryView()
                 .tabItem {
                     Image(systemName: "plus.app")
                 }
-                .tag(1)
+                .tag(ContentTabBarOptions.enterData)
         }
         // Force the Navigation View to use the stack navigation view style.
         // This is default on iPhone but not on iPad. This will create a uniform

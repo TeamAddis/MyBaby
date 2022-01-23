@@ -9,19 +9,20 @@ import SwiftUI
 import GRDBQuery
 
 struct DailySummaryView: View {
-    @Query(BabyRecordRequest(ordering: .dateDecending)) private var records: [BabyRecord]
+    @Environment(\.appDatabase) private var appDatabase
+    @Query(TodaysBabyRecords()) private var records: [BabyRecord]
     
     var body: some View {
         VStack {
             Spacer()
             
-            DailyTotalsView()
+            DailyTotalsView(records: records)
             
-            List {
-                ForEach(records) { record in
-                    BabyRecordListRowView(record: record)
-                }
-            }
+            Spacer()
+            
+            BabyRecordListView(records: records)
+            
+            Spacer()
         }
         
     }
@@ -29,6 +30,6 @@ struct DailySummaryView: View {
 
 struct DailySummaryView_Previews: PreviewProvider {
     static var previews: some View {
-        DailySummaryView()
+        DailySummaryView().environment(\.appDatabase, .test())
     }
 }

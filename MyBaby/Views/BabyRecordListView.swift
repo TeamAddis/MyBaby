@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct BabyRecordListView: View {
+    @Environment(\.appDatabase) private var appDatabase
+    var records: [BabyRecord]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(records) { record in
+                BabyRecordListRowView(record: record)
+            }
+        }
     }
 }
 
@@ -64,7 +71,7 @@ struct BabyRecordListRowView: View {
 
 struct BabyRecordListView_Previews: PreviewProvider {
     static var previews: some View {
-        BabyRecordListView()
+        BabyRecordListView(records: [])
     }
 }
 
