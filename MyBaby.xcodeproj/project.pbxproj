@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0FC0EDD7A33393E2BAA0FA3C /* Pods_MyBabyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1F5CB004A61F4B7D00E4D0 /* Pods_MyBabyTests.framework */; };
-		300E02CB80532EDE3CFCEB33 /* Pods_MyBaby_MyBabyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AADF5F65902B28A8FAF83B5 /* Pods_MyBaby_MyBabyUITests.framework */; };
 		491C4B7B2799541B00DED5C4 /* MyBabyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491C4B7A2799541B00DED5C4 /* MyBabyApp.swift */; };
 		491C4B7D2799541B00DED5C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491C4B7C2799541B00DED5C4 /* ContentView.swift */; };
 		491C4B7F2799541D00DED5C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491C4B7E2799541D00DED5C4 /* Assets.xcassets */; };
@@ -20,7 +18,19 @@
 		491C4BA9279955E100DED5C4 /* DataEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491C4BA8279955E100DED5C4 /* DataEntryView.swift */; };
 		4965922D279A8F7B00A0A10E /* BabyRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4965922C279A8F7B00A0A10E /* BabyRecord.swift */; };
 		4965922F279A8F9E00A0A10E /* MilkRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4965922E279A8F9E00A0A10E /* MilkRecord.swift */; };
-		B2B01163A9F6B38E6388A66A /* Pods_MyBaby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 200089DB0AE61F426B5A5A0F /* Pods_MyBaby.framework */; };
+		49659231279AF09F00A0A10E /* MilkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49659230279AF09F00A0A10E /* MilkTextField.swift */; };
+		49659233279AF7A800A0A10E /* CheckmarkToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49659232279AF7A800A0A10E /* CheckmarkToggleButton.swift */; };
+		49659237279B209D00A0A10E /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 49659236279B209D00A0A10E /* GRDB */; };
+		4965923A279B20BF00A0A10E /* GRDBQuery in Frameworks */ = {isa = PBXBuildFile; productRef = 49659239279B20BF00A0A10E /* GRDBQuery */; };
+		4965923C279B211900A0A10E /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4965923B279B211900A0A10E /* AppDatabase.swift */; };
+		4965923E279B224700A0A10E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4965923D279B224700A0A10E /* Persistence.swift */; };
+		4990F57F279D2226006C83A0 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4990F57E279D2226006C83A0 /* SummaryView.swift */; };
+		4990F581279D2234006C83A0 /* DailySummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4990F580279D2234006C83A0 /* DailySummaryView.swift */; };
+		4990F583279D228C006C83A0 /* BabyRecordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4990F582279D228C006C83A0 /* BabyRecordRequest.swift */; };
+		4990F585279D47D8006C83A0 /* BabyRecordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4990F584279D47D8006C83A0 /* BabyRecordListView.swift */; };
+		4990F587279D6413006C83A0 /* DailyTotalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4990F586279D6413006C83A0 /* DailyTotalsView.swift */; };
+		4990F58B279DBEF7006C83A0 /* AddBirthdayForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4990F58A279DBEF7006C83A0 /* AddBirthdayForm.swift */; };
+		4990F58D279DC19D006C83A0 /* FormSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4990F58C279DC19D006C83A0 /* FormSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +51,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0835AF7888F3B131B5E7B795 /* Pods-MyBabyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBabyTests.debug.xcconfig"; path = "Target Support Files/Pods-MyBabyTests/Pods-MyBabyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		12900EF7C0F706574547291F /* Pods-MyBaby-MyBabyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBaby-MyBabyUITests.release.xcconfig"; path = "Target Support Files/Pods-MyBaby-MyBabyUITests/Pods-MyBaby-MyBabyUITests.release.xcconfig"; sourceTree = "<group>"; };
-		1D1F5CB004A61F4B7D00E4D0 /* Pods_MyBabyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBabyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		200089DB0AE61F426B5A5A0F /* Pods_MyBaby.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBaby.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		491C4B772799541B00DED5C4 /* MyBaby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBaby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		491C4B7A2799541B00DED5C4 /* MyBabyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBabyApp.swift; sourceTree = "<group>"; };
 		491C4B7C2799541B00DED5C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,11 +65,18 @@
 		491C4BA8279955E100DED5C4 /* DataEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEntryView.swift; sourceTree = "<group>"; };
 		4965922C279A8F7B00A0A10E /* BabyRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyRecord.swift; sourceTree = "<group>"; };
 		4965922E279A8F9E00A0A10E /* MilkRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilkRecord.swift; sourceTree = "<group>"; };
-		4C43985686716AE6A4432A4F /* Pods-MyBaby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBaby.release.xcconfig"; path = "Target Support Files/Pods-MyBaby/Pods-MyBaby.release.xcconfig"; sourceTree = "<group>"; };
-		7AADF5F65902B28A8FAF83B5 /* Pods_MyBaby_MyBabyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBaby_MyBabyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C84EF73E36385B45044AD66 /* Pods-MyBaby-MyBabyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBaby-MyBabyUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyBaby-MyBabyUITests/Pods-MyBaby-MyBabyUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		ACAE46B991C419F75F527CE4 /* Pods-MyBaby.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBaby.debug.xcconfig"; path = "Target Support Files/Pods-MyBaby/Pods-MyBaby.debug.xcconfig"; sourceTree = "<group>"; };
-		C0CC536C0077FDDD7FC925C5 /* Pods-MyBabyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBabyTests.release.xcconfig"; path = "Target Support Files/Pods-MyBabyTests/Pods-MyBabyTests.release.xcconfig"; sourceTree = "<group>"; };
+		49659230279AF09F00A0A10E /* MilkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilkTextField.swift; sourceTree = "<group>"; };
+		49659232279AF7A800A0A10E /* CheckmarkToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkToggleButton.swift; sourceTree = "<group>"; };
+		4965923B279B211900A0A10E /* AppDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
+		4965923D279B224700A0A10E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		4965923F279B22FF00A0A10E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4990F57E279D2226006C83A0 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		4990F580279D2234006C83A0 /* DailySummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySummaryView.swift; sourceTree = "<group>"; };
+		4990F582279D228C006C83A0 /* BabyRecordRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyRecordRequest.swift; sourceTree = "<group>"; };
+		4990F584279D47D8006C83A0 /* BabyRecordListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyRecordListView.swift; sourceTree = "<group>"; };
+		4990F586279D6413006C83A0 /* DailyTotalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTotalsView.swift; sourceTree = "<group>"; };
+		4990F58A279DBEF7006C83A0 /* AddBirthdayForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBirthdayForm.swift; sourceTree = "<group>"; };
+		4990F58C279DC19D006C83A0 /* FormSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2B01163A9F6B38E6388A66A /* Pods_MyBaby.framework in Frameworks */,
+				4965923A279B20BF00A0A10E /* GRDBQuery in Frameworks */,
+				49659237279B209D00A0A10E /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FC0EDD7A33393E2BAA0FA3C /* Pods_MyBabyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,7 +100,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				300E02CB80532EDE3CFCEB33 /* Pods_MyBaby_MyBabyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +113,6 @@
 				491C4B8A2799541D00DED5C4 /* MyBabyTests */,
 				491C4B942799541D00DED5C4 /* MyBabyUITests */,
 				491C4B782799541B00DED5C4 /* Products */,
-				C003C3AF5A1937E833CC4FAE /* Pods */,
 				F454B8157B09E3995F02A75F /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -119,6 +130,8 @@
 		491C4B792799541B00DED5C4 /* MyBaby */ = {
 			isa = PBXGroup;
 			children = (
+				4965923F279B22FF00A0A10E /* Info.plist */,
+				49659234279B1BE300A0A10E /* Database */,
 				4965922B279A8F5400A0A10E /* Data Objects */,
 				491C4BA42799544800DED5C4 /* Views */,
 				491C4B7A2799541B00DED5C4 /* MyBabyApp.swift */,
@@ -159,6 +172,14 @@
 				491C4B7C2799541B00DED5C4 /* ContentView.swift */,
 				491C4BA52799546100DED5C4 /* MilkSelectionView.swift */,
 				491C4BA8279955E100DED5C4 /* DataEntryView.swift */,
+				49659230279AF09F00A0A10E /* MilkTextField.swift */,
+				49659232279AF7A800A0A10E /* CheckmarkToggleButton.swift */,
+				4990F57E279D2226006C83A0 /* SummaryView.swift */,
+				4990F580279D2234006C83A0 /* DailySummaryView.swift */,
+				4990F584279D47D8006C83A0 /* BabyRecordListView.swift */,
+				4990F586279D6413006C83A0 /* DailyTotalsView.swift */,
+				4990F58A279DBEF7006C83A0 /* AddBirthdayForm.swift */,
+				4990F58C279DC19D006C83A0 /* FormSheet.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,26 +193,19 @@
 			path = "Data Objects";
 			sourceTree = "<group>";
 		};
-		C003C3AF5A1937E833CC4FAE /* Pods */ = {
+		49659234279B1BE300A0A10E /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				ACAE46B991C419F75F527CE4 /* Pods-MyBaby.debug.xcconfig */,
-				4C43985686716AE6A4432A4F /* Pods-MyBaby.release.xcconfig */,
-				8C84EF73E36385B45044AD66 /* Pods-MyBaby-MyBabyUITests.debug.xcconfig */,
-				12900EF7C0F706574547291F /* Pods-MyBaby-MyBabyUITests.release.xcconfig */,
-				0835AF7888F3B131B5E7B795 /* Pods-MyBabyTests.debug.xcconfig */,
-				C0CC536C0077FDDD7FC925C5 /* Pods-MyBabyTests.release.xcconfig */,
+				4965923B279B211900A0A10E /* AppDatabase.swift */,
+				4965923D279B224700A0A10E /* Persistence.swift */,
+				4990F582279D228C006C83A0 /* BabyRecordRequest.swift */,
 			);
-			name = Pods;
-			path = Pods;
+			path = Database;
 			sourceTree = "<group>";
 		};
 		F454B8157B09E3995F02A75F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				200089DB0AE61F426B5A5A0F /* Pods_MyBaby.framework */,
-				7AADF5F65902B28A8FAF83B5 /* Pods_MyBaby_MyBabyUITests.framework */,
-				1D1F5CB004A61F4B7D00E4D0 /* Pods_MyBabyTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -203,17 +217,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 491C4B9B2799541D00DED5C4 /* Build configuration list for PBXNativeTarget "MyBaby" */;
 			buildPhases = (
-				B62C73FB6D8F1FC9CD2ECB3A /* [CP] Check Pods Manifest.lock */,
 				491C4B732799541B00DED5C4 /* Sources */,
 				491C4B742799541B00DED5C4 /* Frameworks */,
 				491C4B752799541B00DED5C4 /* Resources */,
-				35BFC116FE2058DDE66F8E13 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MyBaby;
+			packageProductDependencies = (
+				49659236279B209D00A0A10E /* GRDB */,
+				49659239279B20BF00A0A10E /* GRDBQuery */,
+			);
 			productName = MyBaby;
 			productReference = 491C4B772799541B00DED5C4 /* MyBaby.app */;
 			productType = "com.apple.product-type.application";
@@ -222,7 +238,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 491C4B9E2799541D00DED5C4 /* Build configuration list for PBXNativeTarget "MyBabyTests" */;
 			buildPhases = (
-				1D4BDA5C61B93F5FFA1FE60E /* [CP] Check Pods Manifest.lock */,
 				491C4B832799541D00DED5C4 /* Sources */,
 				491C4B842799541D00DED5C4 /* Frameworks */,
 				491C4B852799541D00DED5C4 /* Resources */,
@@ -241,11 +256,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 491C4BA12799541D00DED5C4 /* Build configuration list for PBXNativeTarget "MyBabyUITests" */;
 			buildPhases = (
-				F699EF83ED0627760C14B1C6 /* [CP] Check Pods Manifest.lock */,
 				491C4B8D2799541D00DED5C4 /* Sources */,
 				491C4B8E2799541D00DED5C4 /* Frameworks */,
 				491C4B8F2799541D00DED5C4 /* Resources */,
-				78EBCE5D0AC6BE694BE15F4A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -289,6 +302,10 @@
 				Base,
 			);
 			mainGroup = 491C4B6E2799541B00DED5C4;
+			packageReferences = (
+				49659235279B209D00A0A10E /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+				49659238279B20BF00A0A10E /* XCRemoteSwiftPackageReference "GRDBQuery" */,
+			);
 			productRefGroup = 491C4B782799541B00DED5C4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -326,120 +343,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		1D4BDA5C61B93F5FFA1FE60E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MyBabyTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		35BFC116FE2058DDE66F8E13 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyBaby/Pods-MyBaby-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyBaby/Pods-MyBaby-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyBaby/Pods-MyBaby-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		78EBCE5D0AC6BE694BE15F4A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyBaby-MyBabyUITests/Pods-MyBaby-MyBabyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyBaby-MyBabyUITests/Pods-MyBaby-MyBabyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyBaby-MyBabyUITests/Pods-MyBaby-MyBabyUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B62C73FB6D8F1FC9CD2ECB3A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MyBaby-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F699EF83ED0627760C14B1C6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MyBaby-MyBabyUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		491C4B732799541B00DED5C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4965923C279B211900A0A10E /* AppDatabase.swift in Sources */,
+				4990F585279D47D8006C83A0 /* BabyRecordListView.swift in Sources */,
+				4990F583279D228C006C83A0 /* BabyRecordRequest.swift in Sources */,
 				491C4B7D2799541B00DED5C4 /* ContentView.swift in Sources */,
+				4990F58B279DBEF7006C83A0 /* AddBirthdayForm.swift in Sources */,
+				4990F587279D6413006C83A0 /* DailyTotalsView.swift in Sources */,
+				49659231279AF09F00A0A10E /* MilkTextField.swift in Sources */,
 				4965922F279A8F9E00A0A10E /* MilkRecord.swift in Sources */,
 				4965922D279A8F7B00A0A10E /* BabyRecord.swift in Sources */,
+				4990F581279D2234006C83A0 /* DailySummaryView.swift in Sources */,
 				491C4BA9279955E100DED5C4 /* DataEntryView.swift in Sources */,
+				4990F58D279DC19D006C83A0 /* FormSheet.swift in Sources */,
+				49659233279AF7A800A0A10E /* CheckmarkToggleButton.swift in Sources */,
 				491C4B7B2799541B00DED5C4 /* MyBabyApp.swift in Sources */,
 				491C4BA62799546100DED5C4 /* MilkSelectionView.swift in Sources */,
+				4965923E279B224700A0A10E /* Persistence.swift in Sources */,
+				4990F57F279D2226006C83A0 /* SummaryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,7 +519,6 @@
 		};
 		491C4B9C2799541D00DED5C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACAE46B991C419F75F527CE4 /* Pods-MyBaby.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -604,10 +528,10 @@
 				DEVELOPMENT_TEAM = K7242UDDNB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = MyBaby/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -618,13 +542,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
 		491C4B9D2799541D00DED5C4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C43985686716AE6A4432A4F /* Pods-MyBaby.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -634,10 +557,10 @@
 				DEVELOPMENT_TEAM = K7242UDDNB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = MyBaby/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -648,13 +571,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
 		491C4B9F2799541D00DED5C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0835AF7888F3B131B5E7B795 /* Pods-MyBabyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -680,7 +602,6 @@
 		};
 		491C4BA02799541D00DED5C4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0CC536C0077FDDD7FC925C5 /* Pods-MyBabyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -706,7 +627,6 @@
 		};
 		491C4BA22799541D00DED5C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C84EF73E36385B45044AD66 /* Pods-MyBaby-MyBabyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -730,7 +650,6 @@
 		};
 		491C4BA32799541D00DED5C4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12900EF7C0F706574547291F /* Pods-MyBaby-MyBabyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -792,6 +711,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		49659235279B209D00A0A10E /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		49659238279B20BF00A0A10E /* XCRemoteSwiftPackageReference "GRDBQuery" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDBQuery";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		49659236279B209D00A0A10E /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49659235279B209D00A0A10E /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+		49659239279B20BF00A0A10E /* GRDBQuery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49659238279B20BF00A0A10E /* XCRemoteSwiftPackageReference "GRDBQuery" */;
+			productName = GRDBQuery;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 491C4B6F2799541B00DED5C4 /* Project object */;
 }
