@@ -29,6 +29,8 @@
 		4990F583279D228C006C83A0 /* BabyRecordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4990F582279D228C006C83A0 /* BabyRecordRequest.swift */; };
 		4990F585279D47D8006C83A0 /* BabyRecordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4990F584279D47D8006C83A0 /* BabyRecordListView.swift */; };
 		4990F587279D6413006C83A0 /* DailyTotalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4990F586279D6413006C83A0 /* DailyTotalsView.swift */; };
+		4990F58B279DBEF7006C83A0 /* AddBirthdayForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4990F58A279DBEF7006C83A0 /* AddBirthdayForm.swift */; };
+		4990F58D279DC19D006C83A0 /* FormSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4990F58C279DC19D006C83A0 /* FormSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		4990F582279D228C006C83A0 /* BabyRecordRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyRecordRequest.swift; sourceTree = "<group>"; };
 		4990F584279D47D8006C83A0 /* BabyRecordListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyRecordListView.swift; sourceTree = "<group>"; };
 		4990F586279D6413006C83A0 /* DailyTotalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTotalsView.swift; sourceTree = "<group>"; };
+		4990F58A279DBEF7006C83A0 /* AddBirthdayForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBirthdayForm.swift; sourceTree = "<group>"; };
+		4990F58C279DC19D006C83A0 /* FormSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,8 @@
 				4990F580279D2234006C83A0 /* DailySummaryView.swift */,
 				4990F584279D47D8006C83A0 /* BabyRecordListView.swift */,
 				4990F586279D6413006C83A0 /* DailyTotalsView.swift */,
+				4990F58A279DBEF7006C83A0 /* AddBirthdayForm.swift */,
+				4990F58C279DC19D006C83A0 /* FormSheet.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -346,12 +352,14 @@
 				4990F585279D47D8006C83A0 /* BabyRecordListView.swift in Sources */,
 				4990F583279D228C006C83A0 /* BabyRecordRequest.swift in Sources */,
 				491C4B7D2799541B00DED5C4 /* ContentView.swift in Sources */,
+				4990F58B279DBEF7006C83A0 /* AddBirthdayForm.swift in Sources */,
 				4990F587279D6413006C83A0 /* DailyTotalsView.swift in Sources */,
 				49659231279AF09F00A0A10E /* MilkTextField.swift in Sources */,
 				4965922F279A8F9E00A0A10E /* MilkRecord.swift in Sources */,
 				4965922D279A8F7B00A0A10E /* BabyRecord.swift in Sources */,
 				4990F581279D2234006C83A0 /* DailySummaryView.swift in Sources */,
 				491C4BA9279955E100DED5C4 /* DataEntryView.swift in Sources */,
+				4990F58D279DC19D006C83A0 /* FormSheet.swift in Sources */,
 				49659233279AF7A800A0A10E /* CheckmarkToggleButton.swift in Sources */,
 				491C4B7B2799541B00DED5C4 /* MyBabyApp.swift in Sources */,
 				491C4BA62799546100DED5C4 /* MilkSelectionView.swift in Sources */,

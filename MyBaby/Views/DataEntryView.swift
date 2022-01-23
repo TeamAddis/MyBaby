@@ -16,14 +16,25 @@ struct DataEntryView: View {
     @Environment(\.appDatabase) private var appDatabase
     
     @State private var keyboardIsShowing: Bool = false
+    @State private var showBirthDay: Bool = false
     @State private var didPee: Bool = false
     @State private var didPoop: Bool = false
+    @State private var showBirthdayForm: Bool = false
     
     @State private var babyWeightTextField: String = ""
     @State private var breastMilkTextField: String = ""
     @State private var formulaMilkTextField: String = ""
     
     @State private var dateTime: Date = Date()
+    @State private var babyBirthday: Date = Date()
+    
+    init() {
+        // check to see if there is a current baby birtday
+        if (UserDefaults.standard.object(forKey: "babyBirthday") != nil) {
+            self.showBirthDay = true
+            self.babyBirthday = UserDefaults.standard.object(forKey: "babyBirthday") as! Date
+        }
+    }
     
     var body: some View {
         NavigationView {
@@ -32,7 +43,15 @@ struct DataEntryView: View {
                     Section("General") {
                         HStack {
                             Spacer()
-                            Text("Ian is 32 days old!")
+                            if showBirthDay {
+                                Text("Ian is \(Calendar.current.dateComponents([.day], from: self.babyBirthday, to: Date()).day ?? 0) days old!")
+                            } else {
+                                Button(action: {
+                                    self.showBirthdayForm = true
+                                }, label: {
+                                    Text("Add Birthday")
+                                })
+                            }
                             Spacer()
                         }
                         DatePicker("Date & Time: ", selection: self.$dateTime)
@@ -62,8 +81,20 @@ struct DataEntryView: View {
                     })
                         .disabled(disableForm)
                 }
+                .formSheet(isPresented: self.$showBirthdayForm, content: {
+                    AddBirthdayForm(showBirthday: self.$showBirthDay)
+                        .onDisappear(perform: {
+                            if (UserDefaults.standard.object(forKey: "babyBirthday") != nil) {
+                                self.babyBirthday = UserDefaults.standard.object(forKey: "babyBirthday") as! Date
+                            }
+                        })
+                        .frame(width: geometry.size.width / 2, height: 200, alignment: .center)
+                })
             }
             .navigationBarTitle(Text("Enter Data"))
+        }
+        .onAppear() {
+            self.dateTime = Date()
         }
     }
     
