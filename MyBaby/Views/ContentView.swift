@@ -12,6 +12,11 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $tabSelection) {
+            SummaryView()
+                .tabItem {
+                    Image(systemName: "chart.bar.fill")
+                }
+                .tag(0)
             DataEntryView()
                 .tabItem {
                     Image(systemName: "plus.app")

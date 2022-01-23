@@ -11,7 +11,7 @@ import SwiftUI
 struct MyBabyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environment(\.appDatabase, .shared)
         }
     }
 }

@@ -13,6 +13,8 @@ struct DataEntryView: View {
         !didPee && !didPoop && !validWeight() && !validMilkVolume(volumeString: breastMilkTextField) && !validMilkVolume(volumeString: formulaMilkTextField)
     }
     
+    @Environment(\.appDatabase) private var appDatabase
+    
     @State private var keyboardIsShowing: Bool = false
     @State private var didPee: Bool = false
     @State private var didPoop: Bool = false
@@ -20,6 +22,8 @@ struct DataEntryView: View {
     @State private var babyWeightTextField: String = ""
     @State private var breastMilkTextField: String = ""
     @State private var formulaMilkTextField: String = ""
+    
+    @State private var dateTime: Date = Date()
     
     var body: some View {
         NavigationView {
@@ -31,6 +35,7 @@ struct DataEntryView: View {
                             Text("Ian is 32 days old!")
                             Spacer()
                         }
+                        DatePicker("Date & Time: ", selection: self.$dateTime)
                         HStack {
                             Text("Weight: ")
                             TextField("g", text: self.$babyWeightTextField)
@@ -47,7 +52,7 @@ struct DataEntryView: View {
                     }
                     
                     Button(action: {
-                        
+                        saveButtonPressed()
                     }, label: {
                         HStack {
                             Spacer()
@@ -60,6 +65,38 @@ struct DataEntryView: View {
             }
             .navigationBarTitle(Text("Enter Data"))
         }
+    }
+    
+    func cleanForm() {
+        self.didPoop = false
+        self.didPee = false
+        self.dateTime = Date.now
+        self.breastMilkTextField = ""
+        self.formulaMilkTextField = ""
+        self.babyWeightTextField = ""
+    }
+    
+    func makeRecordFromForm() -> BabyRecord {
+        let breastMilkVolume = Int(self.breastMilkTextField) ?? 0
+        let formulaMilkVolume = Int(self.formulaMilkTextField) ?? 0
+        let weight = Double(self.babyWeightTextField) ?? 0
+        let pee = self.didPee
+        let poop = self.didPoop
+        
+        return BabyRecord(id: nil, dateTime: self.dateTime, weight: weight, breastMilkVolume: breastMilkVolume, formulaMilkVolume: formulaMilkVolume, pee: pee, poop: poop)
+    }
+    
+    func saveButtonPressed() {
+        do {
+            var record = makeRecordFromForm()
+            try appDatabase.saveBabyRecord(&record)
+            
+        } catch {
+            let errorAlertTitle = (error as? LocalizedError)?.errorDescription ?? "An error occurred"
+            debugPrint(errorAlertTitle)
+        }
+        
+        cleanForm()
     }
     
     func validMilkVolume(volumeString: String) -> Bool {

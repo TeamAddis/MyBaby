@@ -40,13 +40,17 @@ struct AppDatabase {
         migrator.eraseDatabaseOnSchemaChange = true
         #endif
         
-        migrator.registerMigration("createPlayer") { db in
+        migrator.registerMigration("createBabyRecord") { db in
             // Create a table
             // See https://github.com/groue/GRDB.swift#create-tables
-            try db.create(table: "player") { t in
+            try db.create(table: "babyRecord") { t in
                 t.autoIncrementedPrimaryKey("id")
-                t.column("name", .text).notNull()
-                t.column("score", .integer).notNull()
+                t.column("dateTime", .datetime).notNull()
+                t.column("weight", .double)
+                t.column("breastMilkVolume", .integer)
+                t.column("formulaMilkVolume", .integer)
+                t.column("pee", .boolean)
+                t.column("poop", .boolean)
             }
         }
         
@@ -56,6 +60,40 @@ struct AppDatabase {
         // }
         
         return migrator
+    }
+}
+
+// MARK: - Database Access: Writes
+
+extension AppDatabase {
+    func saveBabyRecord(_ babyRecord: inout BabyRecord) throws {
+        try dbWriter.write {db in
+            try babyRecord.save(db)
+        }
+    }
+    
+    func deleteAll() throws {
+        try dbWriter.write {db in
+            _ = try BabyRecord.deleteAll(db)
+        }
+    }
+    
+    static let uiTestRecords = [
+        BabyRecord(id: nil, dateTime: Date.now, weight: 0, breastMilkVolume: 80, formulaMilkVolume: 0, pee: true, poop: false),
+        BabyRecord(id: nil, dateTime: Date.now, weight: 5, breastMilkVolume: 40, formulaMilkVolume: 40, pee: true, poop: true),
+        BabyRecord(id: nil, dateTime: Date.now, weight: 1, breastMilkVolume: 0, formulaMilkVolume: 0, pee: false, poop: false),
+        BabyRecord(id: nil, dateTime: Date.now, weight: 0, breastMilkVolume: 80, formulaMilkVolume: 0, pee: false, poop: false),
+        BabyRecord(id: nil, dateTime: Date.now, weight: 1.5, breastMilkVolume: 0, formulaMilkVolume: 0, pee: false, poop: false),
+        BabyRecord(id: nil, dateTime: Date.now, weight: 0, breastMilkVolume: 60, formulaMilkVolume: 20, pee: false, poop: false),
+        BabyRecord(id: nil, dateTime: Date.now, weight: 3.5, breastMilkVolume: 0, formulaMilkVolume: 0, pee: false, poop: false),
+    ]
+    
+    func createRecordsForUITest() throws {
+        try dbWriter.write { db in
+            try AppDatabase.uiTestRecords.forEach { record in
+                _ = try record.inserted(db)
+            }
+        }
     }
 }
 
