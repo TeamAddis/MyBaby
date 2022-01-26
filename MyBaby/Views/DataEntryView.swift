@@ -14,6 +14,7 @@ struct DataEntryView: View {
     }
     
     @Environment(\.appDatabase) private var appDatabase
+    @Environment(\.scenePhase) var scenePhase
     @StateObject var keyboardMode = KeyboardMode()
     
     @State private var showBirthDay: Bool = false
@@ -95,6 +96,11 @@ struct DataEntryView: View {
         .onTapGesture {
             if self.keyboardMode.keyboardIsShowing {
                 hideKeyboard()
+            }
+        }
+        .onChange(of: scenePhase) { newPhase in
+            if newPhase == .active {
+                self.dateTime = Date()
             }
         }
     }
