@@ -12,13 +12,17 @@ struct MilkTextField: View {
     @State private var isSelected: Bool = false
     @Binding var milkTextField: String
     
+    @EnvironmentObject var keyboardMode: KeyboardMode
+    
     var body: some View {
         VStack {
             CheckmarkToggleButton(buttonLabel: self.milkLabel, isSelected: self.$isSelected)
             if self.isSelected {
                 HStack {
                     Text("Volume: ")
-                    TextField("ml", text: $milkTextField)
+                    TextField("ml", text: $milkTextField, onEditingChanged: { editing in
+                        self.keyboardMode.keyboardIsShowing = editing
+                    })
                         .keyboardType(.decimalPad)
                 }
             }

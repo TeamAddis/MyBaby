@@ -16,6 +16,7 @@
 		491C4B982799541D00DED5C4 /* MyBabyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491C4B972799541D00DED5C4 /* MyBabyUITestsLaunchTests.swift */; };
 		491C4BA62799546100DED5C4 /* MilkSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491C4BA52799546100DED5C4 /* MilkSelectionView.swift */; };
 		491C4BA9279955E100DED5C4 /* DataEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491C4BA8279955E100DED5C4 /* DataEntryView.swift */; };
+		4964887627A1619B00B398D5 /* HideKeyboard+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964887527A1619B00B398D5 /* HideKeyboard+View.swift */; };
 		4965922D279A8F7B00A0A10E /* BabyRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4965922C279A8F7B00A0A10E /* BabyRecord.swift */; };
 		4965922F279A8F9E00A0A10E /* MilkRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4965922E279A8F9E00A0A10E /* MilkRecord.swift */; };
 		49659231279AF09F00A0A10E /* MilkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49659230279AF09F00A0A10E /* MilkTextField.swift */; };
@@ -63,6 +64,7 @@
 		491C4B972799541D00DED5C4 /* MyBabyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBabyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		491C4BA52799546100DED5C4 /* MilkSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilkSelectionView.swift; sourceTree = "<group>"; };
 		491C4BA8279955E100DED5C4 /* DataEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEntryView.swift; sourceTree = "<group>"; };
+		4964887527A1619B00B398D5 /* HideKeyboard+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HideKeyboard+View.swift"; sourceTree = "<group>"; };
 		4965922C279A8F7B00A0A10E /* BabyRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyRecord.swift; sourceTree = "<group>"; };
 		4965922E279A8F9E00A0A10E /* MilkRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilkRecord.swift; sourceTree = "<group>"; };
 		49659230279AF09F00A0A10E /* MilkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilkTextField.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				4990F586279D6413006C83A0 /* DailyTotalsView.swift */,
 				4990F58A279DBEF7006C83A0 /* AddBirthdayForm.swift */,
 				4990F58C279DC19D006C83A0 /* FormSheet.swift */,
+				4964887527A1619B00B398D5 /* HideKeyboard+View.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				4990F583279D228C006C83A0 /* BabyRecordRequest.swift in Sources */,
 				491C4B7D2799541B00DED5C4 /* ContentView.swift in Sources */,
 				4990F58B279DBEF7006C83A0 /* AddBirthdayForm.swift in Sources */,
+				4964887627A1619B00B398D5 /* HideKeyboard+View.swift in Sources */,
 				4990F587279D6413006C83A0 /* DailyTotalsView.swift in Sources */,
 				49659231279AF09F00A0A10E /* MilkTextField.swift in Sources */,
 				4965922F279A8F9E00A0A10E /* MilkRecord.swift in Sources */,

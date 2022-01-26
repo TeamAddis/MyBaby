@@ -14,8 +14,8 @@ struct DataEntryView: View {
     }
     
     @Environment(\.appDatabase) private var appDatabase
+    @StateObject var keyboardMode = KeyboardMode()
     
-    @State private var keyboardIsShowing: Bool = false
     @State private var showBirthDay: Bool = false
     @State private var didPee: Bool = false
     @State private var didPoop: Bool = false
@@ -28,13 +28,7 @@ struct DataEntryView: View {
     @State private var dateTime: Date = Date()
     @State private var babyBirthday: Date = Date()
     
-    init() {
-        // check to see if there is a current baby birtday
-        if (UserDefaults.standard.object(forKey: "babyBirthday") != nil) {
-            self.showBirthDay = true
-            self.babyBirthday = UserDefaults.standard.object(forKey: "babyBirthday") as! Date
-        }
-    }
+    @State private var daysOld: Int = 0
     
     var body: some View {
         NavigationView {
@@ -44,7 +38,7 @@ struct DataEntryView: View {
                         HStack {
                             Spacer()
                             if showBirthDay {
-                                Text("Ian is \(Calendar.current.dateComponents([.day], from: self.babyBirthday, to: Date()).day ?? 0) days old!")
+                                Text("Ian is \(self.daysOld) days old!")
                             } else {
                                 Button(action: {
                                     self.showBirthdayForm = true
@@ -57,7 +51,9 @@ struct DataEntryView: View {
                         DatePicker("Date & Time: ", selection: self.$dateTime)
                         HStack {
                             Text("Weight: ")
-                            TextField("g", text: self.$babyWeightTextField)
+                            TextField("g", text: self.$babyWeightTextField, onEditingChanged: { editing in
+                                self.keyboardMode.keyboardIsShowing = editing
+                            })
                                 .keyboardType(.decimalPad)
                         }
                     }
@@ -84,18 +80,37 @@ struct DataEntryView: View {
                 .formSheet(isPresented: self.$showBirthdayForm, content: {
                     AddBirthdayForm(showBirthday: self.$showBirthDay)
                         .onDisappear(perform: {
-                            if (UserDefaults.standard.object(forKey: "babyBirthday") != nil) {
-                                self.babyBirthday = UserDefaults.standard.object(forKey: "babyBirthday") as! Date
-                            }
+                            self.loadBabyBirthday()
                         })
                         .frame(width: geometry.size.width / 2, height: 200, alignment: .center)
                 })
             }
             .navigationBarTitle(Text("Enter Data"))
         }
+        .environmentObject(keyboardMode)
         .onAppear() {
             self.dateTime = Date()
+            loadBabyBirthday()
         }
+        .onTapGesture {
+            if self.keyboardMode.keyboardIsShowing {
+                hideKeyboard()
+            }
+        }
+    }
+    
+    func loadBabyBirthday() {
+        if (UserDefaults.standard.object(forKey: "babyBirthday") != nil) {
+            self.babyBirthday = UserDefaults.standard.object(forKey: "babyBirthday") as! Date
+            self.daysOld = self.calcAge()
+            self.showBirthDay = true
+        }
+    }
+    
+    // Calculate the age of the baby.
+    // Return the age in days.
+    func calcAge() -> Int {
+        Calendar.current.dateComponents([.day], from: self.babyBirthday, to: Date()).day ?? 0
     }
     
     func cleanForm() {
